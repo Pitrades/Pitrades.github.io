@@ -1,0 +1,48 @@
+.blue-container{
+    width: 100%;
+    background: #00C2FF;
+    color: rgb(238, 238, 238);
+    margin: 5% 0 0;
+    padding: 0em 0 2em;
+    font-size: 20px;
+}
+
+
+.instagramm-logo {
+    width: 30px;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+
+li{
+    margin: 4em 0;
+}
+
+.Kontakt{
+    margin: 2em 0;
+}
+.Kontakt li{
+    margin: 0.7em auto;
+    text-align: center;
+    
+}
+
+
+
+@media only screen and (min-width: 700px){
+    .instagramm-logo {
+        width: 40px;
+        margin-top: 1em;
+    }
+
+    .about-list{
+        display: flex;
+    }
+
+    .about-list li{
+        width: 100%;
+        text-align: center;
+    }
+
+}
