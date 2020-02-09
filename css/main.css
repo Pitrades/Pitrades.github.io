@@ -1,16 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
 
 
-body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-}
-
-p {
-    font-size: .7em;
-    line-height: 1.6em;
-}
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -131,7 +121,7 @@ header {
     }
 
     .Images img{
-        width: 120%;
+        width: 100%;
     }
 
 

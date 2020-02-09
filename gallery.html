@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<style>
-div.gallery {
-  margin: 20px;
-  position: relative;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-  margin-top: 30px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Makerspace Geistesblitz</title>
+    <link rel="stylesheet" href="css/general.css">
 
-}
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-</style>
-<title>Gallerie</title>
-<link rel="stylesheet" href="css/general.css">
+    <style>
+      div.gallery {
+        border: 1px solid #ccc;
+      }
+      
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+      
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+      
+      .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+      }
+      
+      @media only screen and (max-width: 700px) {
+        .responsive {
+          width: 49.99999%;
+          margin: 6px 0;
+        }
+      }
+      
+      @media only screen and (max-width: 500px) {
+        .responsive {
+          width: 100%;
+        }
+      }
+      
+      .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="images/Geistesblitz.svg" alt="Geistesblitz Logo" class="logo">
+            <embed src="images/Geistesblitz.svg" alt="Geistesblitz Logo" class="logo">
 
             <nav>
                 <a href="#" class="hide-desktop">
@@ -49,33 +77,48 @@ div.desc {
             </nav>
         </header>
     </div>
-<div class="gallery">
-  <a target="_blank" href="images/3d-druck.jfif">
-    <img src="images/3d-druck.jfif" alt="Cinque Terre" width="600" height="400">
-  </a>
-  <div class="desc">Unser 3D-Drucker, der Prusa I3MK3S</div>
-</div>
 
-<div class="gallery">
-  <a target="_blank" href="images/computer_grau.jfif">
-    <img src="images/computer_grau.jfif" alt="Forest" width="600" height="400">
-  </a>
-  <div class="desc">Very retro</div>
-</div>
 
-<div class="gallery">
-  <a target="_blank" href="images/erster_kunstharzdruck.jfif">
-    <img src="images/erster_kunstharzdruck.jfif" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">sieht aus wie gegossen, man kann gar nicht erkennen, dass es gedruckt wurde!!(wurde es aber 10 mal bevor es funktionierte)</div>
-</div>
+  
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="images/3d-druck.jfif">
+          <img src="images/3d-druck.jfif" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Unser 3D-Drucker!</div>
+      </div>
+    </div>
+    
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="images/computer_grau.jfif">
+          <img src="images/computer_grau.jfif" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Very retro</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="images/erster_kunstharzdruck.jfif">
+          <img src="images/erster_kunstharzdruck.jfif" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Wie gegossen, nach dem 10. Druckversuch</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="images/kunstharzdrucker.jfif">
+          <img src="images/kunstharzdrucker.jfif" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Kunstharzdrucker, flüssigkeit gefährlich!</div>
+      </div>
+    </div>
+    
+    <div class="clearfix"></div>
 
-<div class="gallery">
-  <a target="_blank" href="images/kunstharzdrucker.jfif">
-    <img src="images/kunstharzdrucker.jfif" alt="Mountains" width="600" height="400">
-  </a>
-  <div class="desc">Kunstharzdrucker, flüssigkeit gefährlich!
-  </div>
-</div>
 <script src="js/main.js"></script>
 </body>
+</html>
