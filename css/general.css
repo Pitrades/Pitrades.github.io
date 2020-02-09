@@ -133,4 +133,10 @@ nav {
         text-decoration: underline;
     }
 
+
+    .container{
+        width: 85%;
+        margin: 0 auto;
+
+    }
 }
