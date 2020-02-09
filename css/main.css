@@ -37,7 +37,7 @@ header {
     background: #00C2FF;
     color: rgb(238, 238, 238);
     margin: 5% 0 0;
-    padding: 0.1em 0 2em;
+    padding: 4em 0 2em;
     border-top-left-radius: 20px;
     transform: skewY(-2deg);
 }
@@ -158,7 +158,7 @@ header {
     .hide-desktop{
         display: none;
     }
-
+}
 @media only screen and (min-width: 1200px)  {
 
     .blue-container ul li{
