@@ -1,10 +1,68 @@
-.blue-container{
+
+
+.blue-container {
     width: 100%;
     background: #00C2FF;
     color: rgb(238, 238, 238);
     margin: 5% 0 0;
-    padding: 0em 0 2em;
-    font-size: 20px;
+    padding: 4em 0 2em;
+    border-top-left-radius: 20px;
+    transform: skewY(-2deg);
+    font-size:20px;
+}
+
+.blue-container div{
+    transform: skewY(2deg);
+}
+.blue-container ul :first-child p{
+    margin-bottom: 50px;
+
+}
+
+
+.blue-container:before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #00C2FF;
+    position: absolute;
+    top: -29px;
+    right: 0px;
+    z-index: -2;
+}
+
+.blue-container:after{
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    top: -60px;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+}
+.blue-container:before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #00C2FF;
+    position: absolute;
+    top: -29px;
+    right: 0px;
+    z-index: -2;
+}
+
+.blue-container:after{
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    top: -60px;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
 }
 
 
@@ -14,8 +72,11 @@
     cursor: pointer;
 }
 
-
-li{
+.hvs{
+    width: 30px;
+    
+}
+.about-list li{
     margin: 4em 0;
 }
 
@@ -27,7 +88,6 @@ li{
     text-align: center;
     
 }
-
 
 
 @media only screen and (min-width: 700px){
@@ -45,4 +105,28 @@ li{
         text-align: center;
     }
 
+}
+
+
+@media only screen and (min-width: 1000px)  {
+    .blue-container{
+        padding-top: 2em;
+    }
+    .logo {
+        width: 100px
+    }
+    .container{
+        width: 85%;
+        margin: 0 auto;
+
+    }
+
+    .show-desktop {
+        display: block;
+        margin: 0 auto 13% auto;
+    }
+
+    .hide-desktop{
+        display: none;
+    }
 }

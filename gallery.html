@@ -55,27 +55,20 @@
         clear: both;
       }
       </style>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <embed src="images/Geistesblitz.svg" alt="Geistesblitz Logo" class="logo">
 
-            <nav>
-                <a href="#" class="hide-desktop">
-                    <img src="images/ham.svg" alt="toggle-menu" class="menu" id="menu">
-                </a>
+  <div id="nav-placeholder">
 
-                <ul class="show-desktop hide-mobile" id="nav">
-                    <li id="exit" class="exit-btn hide-desktop"><img src="images/exit.svg" alt="exit menu"></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Galerie</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
+  </div>
+  
+  <script>
+    $.get("oben.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+    });
+    </script>
+  
 
 
   
@@ -91,8 +84,8 @@
     
     <div class="responsive">
       <div class="gallery">
-        <a target="_blank" href="images/computer_grau.jfif">
-          <img src="images/computer_grau.jfif" alt="Forest" width="600" height="400">
+        <a target="_blank" href="images/computer_grau.png.jfif">
+          <img src="images/computer_grau.png.jfif" alt="Forest" width="600" height="400">
         </a>
         <div class="desc">Very retro</div>
       </div>
@@ -118,6 +111,6 @@
     
     <div class="clearfix"></div>
 
-<script src="js/main.js"></script>
+
 </body>
 </html>

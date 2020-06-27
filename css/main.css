@@ -32,6 +32,14 @@ header {
     transform: skewY(-2deg);
 }
 
+ 
+.blue-container ul :first-child p{
+    margin-bottom: 50px;
+}
+
+.blue-container ul{
+    transform: skewY(2deg);
+}
 .blue-container:before{
     content: "";
     width: 30px;
@@ -54,15 +62,6 @@ header {
     border-radius: 50%;
     z-index: -1;
 }
-
-.blue-container div{
-    transform: skewY(2deg);
-}
-
-.blue-container ul :first-child p{
-    margin-bottom: 50px;
-}
-
 
 .Images img{
     width: 80%;

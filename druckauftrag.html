@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spenden fefeb Service</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/spenden.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+  <div id="nav-placeholder">
+
+  </div>
+  
+  <script>
+    $.get("oben.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+    });
+    </script>
+
+    <div class="blue-container"> 
+        <div class="container"> 
+            <ul>
+                <li>Kostenloser Service gegen Spenden.</li>     
+              <li>   <textarea name="defi" cols="30" rows="10"></textarea>           </li>
+              <li><button type="Button">Absenden</button></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+            
+</body>
+
+
+</html>

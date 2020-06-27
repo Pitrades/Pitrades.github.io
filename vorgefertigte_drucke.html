@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Makerspace Geistesblitz</title>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+      div.gallery {
+        border: 1px solid #ccc;
+      }
+      
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+      
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+      
+      .responsive {
+        box-sizing: border-box;
+      }
+      
+      .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+      }
+      
+      @media only screen and (max-width: 700px) {
+        .responsive {
+          width: 49.99999%;
+          margin: 6px 0;
+        }
+      }
+      
+      @media only screen and (max-width: 500px) {
+        .responsive {
+          width: 100%;
+        }
+      }
+      
+      .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      </style>
+
+
+</head>
+<body>
+    <div id="nav-placeholder">
+
+    </div>
+    
+    <script>
+
+    
+ function calc_preis(){
+
+        var preis_t = Number(0);
+        var produkte = document.getElementsByClassName("responsive")
+        var preis = $(".preis").text();
+        var anzahl = $('.t').map(function(){
+          return $.trim($(this).text());
+       }).get();
+        
+        preis = preis.split("€");
+        var preis2 = [];
+        for (var i=0; i<preis.length; i++){
+          if(preis[i]==Number(preis[i])){
+            preis2[preis2.length]=preis[i];
+          }
+        }
+        preis = preis2;
+        for (var i = 0; i < anzahl.length; i++) {
+          preis_t = preis_t+Number(preis[i])*Number(anzahl[i]);
+          //Do something
+      }
+        $(".t_preis").text(preis_t+"€");
+
+
+      }
+      $.get("oben.html", function(data){
+          $("#nav-placeholder").replaceWith(data);
+      });
+
+
+      function add(name){
+
+        $(document).ready(function(){
+            //$("#"+name).parent().children("#t").text(Number(("#"+name).parent().children("#t").text())+1);
+            
+            $("#"+name).parent().children("span").addOne();
+            
+        });}
+        //Number(("#"+name).parent().children("#t").text())+1
+
+      function sub(name){
+      $(document).ready(function(){
+        //$("#"+name).parent().children("#t").text(Number(("#"+name).parent().children("#t").text())+1);
+        
+        $("#"+name).parent().children("span").subtractOne();
+    });}
+        (function($) {
+          $.extend($.fn, {
+               "addOne": function() {
+                    var num = parseInt(this.text(), 10);
+                    this.text(++num);
+                    calc_preis();
+               },
+               "subtractOne": function() {
+                    var num = parseInt(this.text(), 10);
+                    if(num>0){
+                    this.text(--num);
+                    calc_preis();}
+               },
+          });
+      }(jQuery))
+
+
+      </script>
+
+<div class="preis_anzeige">
+  <ul>
+    <li>
+      Preis total:
+  <div class="t_preis">0€</div>
+</li>
+<li>
+ Email-Adresse
+    <input type="text">
+
+  </li>
+
+  <li>
+    <button id="Absenden">Absenden</button>
+  </li>
+
+  </ul>
+</div>
+
+    <div class="responsive">
+      <div class="gallery">
+      <div class="desc">Eierhalter
+        <div class="preis">5€</div>
+      </div>
+    
+      <a target="_blank" href="images/3d-druck.jfif">
+          <img src="images/3d-druck.jfif" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc"><button onclick="add(this.id)" id="eierhalter_a">+</button>
+                          <span class="t">
+                            0
+                          </span>
+                          <button id="eierhalter_s" onclick="sub(this.id)">-</button>
+                          </div>
+      </div>
+    </div>
+    
+    
+    <div class="responsive" id="handyhalter">
+      <div class="gallery">
+      <div class="desc">Bauhaus-Handyhalter
+        <div class="preis">7€</div>
+      </div>
+        <a target="_blank" href="images/bauhaus_handyhalter.jpg">
+          <img src="images/bauhaus_handyhalter.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc"><button onclick="add(this.id)" id="handyhalter_a">+</button>
+                          <span class="t">
+                            0
+                          </span>
+                          <button id="handyhalter_s" onclick="sub(this.id)">-</button>
+                          </div>
+      </div>
+
+
+    </div>
+
+        <div class="responsive" id="gesichtsschild">
+      <div class="gallery">
+      <div class="desc">Gesichtsschild
+        <div class="preis">5€</div>
+      </div>
+        <a target="_blank" href="images/gesichtsschild.jpg">
+          <img src="images/gesichtsschild.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc"><button onclick="add(this.id)" id="gesichtsschild_a">+</button>
+                          <span class="t">
+                            0
+                          </span>
+                          <button id="gesichtsschild_s" onclick="sub(this.id)">-</button>
+                          </div>
+      </div>
+    </div>
+
+
+
+    <div class="responsive" id="ohrenschoner">
+      <div class="gallery">
+      <div class="desc">Ohrenschoner
+        <div class="preis">1€</div>
+      </div>
+        <a target="_blank" href="images/ohrenschoner.jpg">
+          <img src="images/ohrenschoner.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc"><button onclick="add(this.id)" id="ohrenschoner_a">+</button>
+                          <span class="t">
+                            0
+                          </span>
+                          <button id="ohrenschoner_s" onclick="sub(this.id)">-</button>
+                          </div>
+      </div>
+    </div>
+
+    <div class="responsive" id="buffehalter">
+      <div class="gallery">
+      <div class="desc">Buffethalter
+        <div class="preis">4€</div>
+      </div>
+        <a target="_blank" href="images/buffethalter.jpg">
+          <img src="images/buffethalter.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc"><button onclick="add(this.id)" id="buffehalter_a">+</button>
+                          <span class="t">
+                            0
+                          </span>
+                          <button id="buffehalter_s" onclick="sub(this.id)">-</button>
+                          </div>
+      </div>
+    </div>
+
+    <div class="responsive" id="eule_1">
+      <div class="gallery">
+      <div class="desc">Eule
+        <div class="preis">4€</div>
+      </div>
+        <a target="_blank" href="images/eule_1.jpg">
+          <img src="images/eule_1.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc"><button onclick="add(this.id)" id="eule_1_a">+</button>
+                          <span class="t">
+                            0
+                          </span>
+                          <button id="eule_1_s" onclick="sub(this.id)">-</button>
+                          </div>
+      </div>
+    </div>
+
+
+    <div class="responsive" id="eule_2">
+      <div class="gallery">
+      <div class="desc">Eule
+        <div class="preis">4€</div>
+      </div>
+        <a target="_blank" href="images/eule_2.jpg">
+          <img src="images/eule_2.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc"><button onclick="add(this.id)" id="eule_2_a">+</button>
+                          <span class="t">
+                            0
+                          </span>
+                          <button id="eule_2_s" onclick="sub(this.id)">-</button>
+                          </div>
+      </div>
+    </div>
+
+    
+    <div class="clearfix"></div>
+
+<script src="js/main.js"></script>
+
+
+        
+</body>
+</html>
