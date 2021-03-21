@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/spenden.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="dropzone-5.7.0/dist/dropzone.js"></script>
 </head>
 <body>
   <div id="nav-placeholder">
@@ -23,15 +24,20 @@
     <div class="blue-container"> 
         <div class="container"> 
             <ul>
-                <li>Kostenloser Service gegen Spenden.</li>     
-              <li>   <textarea name="defi" cols="30" rows="10"></textarea>           </li>
-              <li><button type="Button">Absenden</button></li>
+                <li>Hier können Sie ihre Druckaufträge an uns schicken. Ob fertige STL-Dateien oder nur technische Zeichnungen/Bilder. Geben Sie das gewünschte Material und die benötigte Schichthöhe an.</li>     
+              <li>    
+                <textarea class="druckauftrag" name="defi"> HIER BITTE FILE UPLOAD </textarea>    </li>
+
+
+              <li><button type="Button" id="absbut">Absenden</button></li>
             </ul>
         </div>
     </div>
 
 
-
+<div id="impressumdiv">
+<a href="impressum.html" id="impressum">Impressum</a>
+</div>
             
 </body>
 
