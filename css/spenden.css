@@ -3,7 +3,7 @@
     background: #00C2FF;
     color: rgb(238, 238, 238);
     margin: 5% 0 0;
-    padding: 4em 0 2em;
+    padding: 6em 0 2em;
     border-top-left-radius: 20px;
     transform: skewY(-2deg);
 }
@@ -13,7 +13,7 @@
     margin-bottom: 50px;
 }
 
-.blue-container div{
+.blue-container ul{
     transform: skewY(2deg);
 }
 .blue-container:before{
@@ -45,6 +45,31 @@ textarea {
     width: 750px;
     height: 300px;
 
+}
+
+.druckauftrag {
+    border-radius: 10px;
+    box-shadow: blue;
+    border-color: grey;
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.druckauftrag :hover{
+    border-color: black;
+    border: 1px;
+    border-radius: 10px;
+}
+
+#absbut {
+    background-color: white; /* #00C2FF */
+    color: black;
+    font-size: 13px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-color:grey;
+    border-style: solid
 }
 
 @media only screen and (min-width: 750px)  {
